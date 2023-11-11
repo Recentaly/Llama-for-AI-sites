@@ -25,7 +25,7 @@ This Flask app is designed to be seamlessly integrated into various AI sites. It
 ### Installation
 1. Clone the repository.
 2. Install the required dependencies: `pip install -r requirements.txt`.
-3. Run the Flask app: `python app.py`.
+3. Run the Flask app: `python main.py`.
 
 ## Contributions
 Contributions are welcome! If you have suggestions, bug reports, or enhancements, feel free to create issues or submit pull requests.
