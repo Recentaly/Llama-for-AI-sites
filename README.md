@@ -1,2 +1,37 @@
 # Llama-for-AI-sites
-A new version of my old repository which includes meta llama models
+
+Welcome to Llama-for-AI-sites, a Flask-based application designed to host multiple models from the Llama series, including "llama-2-7b," "llama-2-13b," and "llama-2-70b." It provides these models entirely free of charge for integration into various AI-driven sites and is specifically designed for [Venus Chub Ai](https://venus.chub.ai)
+
+## Features
+
+### Supported Models
+- **llama-2-7b**: A powerful model designed for specific AI tasks.
+- **llama-2-13b**: A larger version for more complex AI processing.
+- **llama-2-70b**: The most extensive model for comprehensive AI capabilities.
+
+### Routes
+- `/chat/completions`: Use this route to facilitate chat completions powered by the Llama models.
+- `/models`: Explore the available models and their specific functionalities.
+
+## Usage
+This Flask app is designed to be seamlessly integrated into various AI sites. It provides an API for accessing the mentioned Llama models, allowing developers to leverage its capabilities for different AI-driven purposes.
+
+## Getting Started
+
+### Prerequisites
+- Python = 3.10
+- Flask
+
+### Installation
+1. Clone the repository.
+2. Install the required dependencies: `pip install -r requirements.txt`.
+3. Run the Flask app: `python app.py`.
+
+## Contributions
+Contributions are welcome! If you have suggestions, bug reports, or enhancements, feel free to create issues or submit pull requests.
+
+## License
+This project is licensed under the [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.txt).
+
+## Acknowledgments
+- Thanks to the developers behind the Llama models for their incredible work.
