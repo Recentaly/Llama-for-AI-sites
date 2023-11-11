@@ -58,7 +58,7 @@ This project is licensed under the <a href="./LICENSE">GNU_AGPL_v3.0</a>.<img wi
     </td>
     <td> 
       <img src="https://img.shields.io/badge/Google_Colab-orange"/> <br> 
-<a href="https://colab.research.google.com/drive/1-9EEf1oaEo2IT7COtBVbpE7iKmRUxcQP#scrollTo=1am1-IRC-J0l">Also hosted on google colab</a>.<img width=2300/>
+<a href="https://colab.research.google.com/drive/1-9EEf1oaEo2IT7COtBVbpE7iKmRUxcQP?usp=sharing">Also hosted on google colab</a>.<img width=2300/>
     </td>
   </tr>
 </table>
