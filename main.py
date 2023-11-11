@@ -1,5 +1,5 @@
 # import local server files
-from flask import Flask, jsonify, request, Response
+from flask import Flask, jsonify, request
 from flask_cors import CORS # cors handler
 
 # import chatting module
@@ -124,7 +124,7 @@ async def generate():
     messages = []
     
     # return the wrapped json response back to the original requestor
-    return Response(jsonify(wrapped_response), 200, content_type='application/json; charset=utf-8')
+    return jsonify(wrapped_response), 200
 
 # this route of the server handles GET requests and is called when someone wants to get a list of available models
 @app.route("/models", methods=['GET'])
