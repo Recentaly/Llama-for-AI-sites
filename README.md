@@ -38,7 +38,7 @@ Contributions are welcome! If you have suggestions, bug reports, or enhancements
 <table>
   <tr>
      <td>
-       <p align="center"> <img src="https://www.gnu.org/graphics/agplv3-155x51.png" width="200%"></img>
+       <p align="center"> <img src="https://www.gnu.org/graphics/agplv3-155x51.png" width="500%"></img>
     </td>
     <td> 
       <img src="https://img.shields.io/badge/GNU_AGPL_v3.0-purple.svg"/> <br> 
