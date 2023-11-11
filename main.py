@@ -44,6 +44,7 @@ client = Client()
 # empty messages list at the start
 messages = []
 
+# this route handles chat completiom requests. returns generic openai json format.
 @app.route("/chat/completions", methods=['POST'])
 async def generate():
 
