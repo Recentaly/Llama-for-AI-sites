@@ -20,6 +20,9 @@ from modules.tokens.token_counter import count_tokens
 # import conversion module for janitorai support
 import modules.transform.janitorai.conversion as jai
 
+# import the global server host from cloudflare
+from flask_cloudflared import run_with_cloudflared
+
 # import module which can generate random numbers
 import random
 
@@ -129,5 +132,8 @@ async def hi():
 # start the local web server
 if __name__ == '__main__':
 
-    # this gives us local urls
+    # this will give us globally usable urls on start of the server
+    run_with_cloudflared(app)
+
+    # this actually starts the server
     app.run(debug=DEBUG, host=HOST, port=PORT)
