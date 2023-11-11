@@ -89,7 +89,7 @@ async def generate():
     response: str = await client.generate(messages, await models_transform.encrypt_model(MODEL), f"{await get_system_message(messages)}", temperature=TEMPERATURE, top_p=TOP_P, max_tokens=MAX_TOKENS)
 
     # remove NUL (empty) characters from the response (common bug which causes errors) and then re-encode it to UTF-8 before decoding it to a string again.
-    response = response.replace('\x00', '').encode('utf-8', 'replace').decode('utf-8')
+    response = response.encode('utf-8', 'ignore').decode('utf-8')
 
     # count output tokens
     output_tokens: int = await count_tokens(encoder, messages[-1]["content"])
