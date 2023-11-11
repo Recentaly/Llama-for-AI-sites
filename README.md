@@ -16,6 +16,8 @@ Welcome to Llama-for-AI-sites, a Flask-based application designed to host multip
 ## Usage
 This Flask app is designed to be seamlessly integrated into various AI sites. It provides an API for accessing the mentioned Llama models, allowing developers to leverage its capabilities for different AI-driven purposes.
 
+Because of it's routes, it can be used as a base for OpenAI proxies.
+
 ## Getting Started
 
 ### Prerequisites
