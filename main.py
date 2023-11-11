@@ -31,7 +31,7 @@ app = Flask(__name__)
 CORS(app) # handle cors
 
 # app configuration
-DEBUG: bool = True
+DEBUG: bool = False
 HOST: str = '0.0.0.0'
 PORT: int = 5000
 
