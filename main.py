@@ -47,7 +47,7 @@ client = Client()
 # empty messages list at the start
 messages = []
 
-# this route handles chat completiom requests. returns generic openai json format.
+# This route handles chat completion requests. returns generic OpenAI JSON format.
 @app.route("/chat/completions", methods=['POST'])
 async def generate():
 
@@ -66,7 +66,7 @@ async def generate():
         # and add them to the list
         messages.append(message)
 
-    # copy over other settings
+    # Copy over other settings
     MODEL = request_data.get("model", None)
     TEMPERATURE = request_data.get("temperature", None)
 
@@ -85,16 +85,24 @@ async def generate():
     # count input tokens
     input_tokens: int = await count_tokens(encoder, await msg_transform.msg_str(messages))
 
-    # let the ai generate a response
+    # let the AI generate a response
     response: str = await client.generate(messages, await models_transform.encrypt_model(MODEL), f"{await get_system_message(messages)}", temperature=TEMPERATURE, top_p=TOP_P, max_tokens=MAX_TOKENS)
 
-    # remove NUL (empty) characters from the response (common bug which causes errors) and then re-encode it to UTF-8 before decoding it to a string again.
-    response = response.replace('\x00', '')
+    # try removing NUL (empty) characters from the response (a common bug that causes errors)
+    try:
+        
+        response = response.replace('\x00', '')
+
+    # exception which occurs if the response is empty (occurs on janitorai)
+    except AttributeError:
+
+        # Simply pass and ignore
+        pass
 
     # count output tokens
     output_tokens: int = await count_tokens(encoder, messages[-1]["content"])
 
-    # at the end, we notify the user again that we're done generating (these are mainly for debugging)
+    # At the end, we notify the user again that we're done generating (these are mainly for debugging)
     app.logger.info(f"{MODEL} has gotten {input_tokens} tokens and generated {output_tokens} tokens.\n")
 
     # return a wrapped response
@@ -120,13 +128,13 @@ async def generate():
         }
     }
 
-    # once a reply is generated, we must delete the list of messages (as it will be refilled later on anyways)
+    # Once a reply is generated, we must delete the list of messages (as it will be refilled later on anyway)
     messages = []
     
-    # return the wrapped json response back to the original requestor
+    # return the wrapped JSON response back to the original requestor
     return jsonify(wrapped_response), 200
 
-# this route of the server handles GET requests and is called when someone wants to get a list of available models
+# This route of the server handles GET requests and is called when someone wants to get a list of available models
 @app.route("/models", methods=['GET'])
 async def hi():
 
@@ -135,8 +143,8 @@ async def hi():
 # start the local web server
 if __name__ == '__main__':
 
-    # this will give us globally usable urls on start of the server
+    # This will give us globally usable URLs at the start of the server
     run_with_cloudflared(app)
 
-    # this actually starts the server
+    # This actually starts the server
     app.run(debug=DEBUG, host=HOST, port=PORT)
