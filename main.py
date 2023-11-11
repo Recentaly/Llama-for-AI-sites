@@ -88,6 +88,9 @@ async def generate():
     # let the ai generate a response
     response: str = await client.generate(messages, await models_transform.encrypt_model(MODEL), f"{await get_system_message(messages)}", temperature=TEMPERATURE, top_p=TOP_P, max_tokens=MAX_TOKENS)
 
+    # remove NUL (empty) characters from the response (common bug which causes errors)
+    response = response.replace('\x00', '')
+
     # count output tokens
     output_tokens: int = await count_tokens(encoder, messages[-1]["content"])
 
