@@ -58,7 +58,7 @@ class Client:
             messages.append({"role": "assistant", "content": f"{response.text}"})
 
             # return the generated text
-            return response.text
+            return response.text.encode('utf-8', 'replace').decode('utf-8')
         
         else:
             logger.error(f"Failed with status code {response.status_code}")
