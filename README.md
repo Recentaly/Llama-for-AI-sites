@@ -54,11 +54,11 @@ This project is licensed under the <a href="./LICENSE">GNU_AGPL_v3.0</a>.<img wi
 <table>
   <tr>
      <td>
-       <p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Colaboratory_SVG_Logo.svg/800px-Google_Colaboratory_SVG_Logo.svg.png" width="90%"></img>
+       <p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Colaboratory_SVG_Logo.svg/800px-Google_Colaboratory_SVG_Logo.svg.png" width="80%"></img>
     </td>
     <td> 
       <img src="https://img.shields.io/badge/Google_Colab-orange"/> <br> 
-This project is licensed under the <a href="https://colab.research.google.com/drive/1-9EEf1oaEo2IT7COtBVbpE7iKmRUxcQP#scrollTo=1am1-IRC-J0l">Also hosted on google colab</a>.<img width=2300/>
+<a href="https://colab.research.google.com/drive/1-9EEf1oaEo2IT7COtBVbpE7iKmRUxcQP#scrollTo=1am1-IRC-J0l">Also hosted on google colab</a>.<img width=2300/>
     </td>
   </tr>
 </table>
