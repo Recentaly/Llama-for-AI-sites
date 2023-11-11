@@ -27,7 +27,7 @@ Because of it's routes, it can be used as a base for OpenAI proxies.
 ### Installation
 1. Clone the repository.
 2. Install the required dependencies: `pip install -r requirements.txt`.
-3. Run the Flask app: `python main.py`.
+3. Run the Flask app: `py -3.10 main.py`.
 
 ## Contributions
 Contributions are welcome! If you have suggestions, bug reports, or enhancements, feel free to create issues or submit pull requests.
