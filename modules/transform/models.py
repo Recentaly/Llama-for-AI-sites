@@ -15,7 +15,7 @@ async def decrypt_model(key: str) -> str:
         
         case "13c3cdee13ee059ab779f0291d29054dab00a47dad8261375654de5540165fb0":
 
-            return " llama-2-7b-chat"
+            return "llama-2-7b-chat"
         
 # this function reverses the process above
 async def encrypt_model(name: str):
