@@ -121,7 +121,7 @@ async def generate():
     messages = []
     
     # return the wrapped json response back to the original requestor
-    return wrapped_response
+    return jsonify(wrapped_response), 200
 
 # this route of the server handles GET requests and is called when someone wants to get a list of available models
 @app.route("/models", methods=['GET'])
