@@ -54,11 +54,11 @@ This project is licensed under the <a href="./LICENSE">GNU_AGPL_v3.0</a>.<img wi
 <table>
   <tr>
      <td>
-       <p align="center"> <img src="https://media.licdn.com/dms/image/D5612AQFCsBJ9kV2Meg/article-cover_image-shrink_600_2000/0/1693671062221?e=2147483647&v=beta&t=kuUAueWD4OeUWzJd6f_zqZbBT6KO3xgW_Uw-2AcCb0M" width="120%"></img>
+       <p align="center"> <img src="https://media.licdn.com/dms/image/D5612AQFCsBJ9kV2Meg/article-cover_image-shrink_600_2000/0/1693671062221?e=2147483647&v=beta&t=kuUAueWD4OeUWzJd6f_zqZbBT6KO3xgW_Uw-2AcCb0M" width="200%"></img>
     </td>
     <td> 
       <img src="https://img.shields.io/badge/Google_Colab-orange"/> <br> 
-This project is licensed under the <a href="https://colab.research.google.com/drive/1-9EEf1oaEo2IT7COtBVbpE7iKmRUxcQP#scrollTo=1am1-IRC-J0l">GNU_AGPL_v3.0</a>.<img width=2300/>
+This project is licensed under the <a href="https://colab.research.google.com/drive/1-9EEf1oaEo2IT7COtBVbpE7iKmRUxcQP#scrollTo=1am1-IRC-J0l">Also hosted on google colab</a>.<img width=2300/>
     </td>
   </tr>
 </table>
