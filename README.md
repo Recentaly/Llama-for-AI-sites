@@ -35,6 +35,8 @@ Contributions are welcome! If you have suggestions, bug reports, or enhancements
 ## Acknowledgments
 - Thanks to the developers behind the Llama models for their incredible work.
 
+## License
+
 <table>
   <tr>
      <td>
