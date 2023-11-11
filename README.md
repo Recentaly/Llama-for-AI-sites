@@ -42,7 +42,7 @@ Contributions are welcome! If you have suggestions, bug reports, or enhancements
     </td>
     <td> 
       <img src="https://img.shields.io/badge/License-GNU_GPL_v3.0-red.svg"/> <br> 
-This project is licensed under <a href="./LICENSE">GNU_GPL_v3.0</a>. <img width=2300/>
+This project is licensed under the<a href="./LICENSE">AGNU_GPL_v3.0</a>. <img width=2300/>
     </td>
   </tr>
 </table>
