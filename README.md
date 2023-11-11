@@ -54,7 +54,7 @@ This project is licensed under the <a href="./LICENSE">GNU_AGPL_v3.0</a>.<img wi
 <table>
   <tr>
      <td>
-       <p align="center"> <img src="https://media.licdn.com/dms/image/D5612AQFCsBJ9kV2Meg/article-cover_image-shrink_600_2000/0/1693671062221?e=2147483647&v=beta&t=kuUAueWD4OeUWzJd6f_zqZbBT6KO3xgW_Uw-2AcCb0M" width="200%"></img>
+       <p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Colaboratory_SVG_Logo.svg/800px-Google_Colaboratory_SVG_Logo.svg.png" width="90%"></img>
     </td>
     <td> 
       <img src="https://img.shields.io/badge/Google_Colab-orange"/> <br> 
