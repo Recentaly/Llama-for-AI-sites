@@ -41,8 +41,8 @@ Contributions are welcome! If you have suggestions, bug reports, or enhancements
        <p align="center"> <img src="https://de.wikipedia.org/wiki/Datei:AGPLv3_Logo.svg" width="80%"></img>
     </td>
     <td> 
-      <img src="https://img.shields.io/badge/License-GNU_GPL_v3.0-red.svg"/> <br> 
-This project is licensed under the<a href="./LICENSE">AGNU_GPL_v3.0</a>. <img width=2300/>
+      <img src="https://img.shields.io/badge/GNU_AGPL_v3.0-purple.svg"/> <br> 
+This project is licensed under the<a href="./LICENSE">GNU_AGPL_v3.0</a>.<img width=2300/>
     </td>
   </tr>
 </table>
