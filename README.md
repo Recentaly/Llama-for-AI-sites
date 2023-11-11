@@ -32,8 +32,17 @@ Because of it's routes, it can be used as a base for OpenAI proxies.
 ## Contributions
 Contributions are welcome! If you have suggestions, bug reports, or enhancements, feel free to create issues or submit pull requests.
 
-## License
-This project is licensed under the [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.txt).
-
 ## Acknowledgments
 - Thanks to the developers behind the Llama models for their incredible work.
+
+<table>
+  <tr>
+     <td>
+       <p align="center"> <img src="https://de.wikipedia.org/wiki/Datei:AGPLv3_Logo.svg" width="80%"></img>
+    </td>
+    <td> 
+      <img src="https://img.shields.io/badge/License-GNU_GPL_v3.0-red.svg"/> <br> 
+This project is licensed under <a href="./LICENSE">GNU_GPL_v3.0</a>. <img width=2300/>
+    </td>
+  </tr>
+</table>
