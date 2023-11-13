@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS # cors handler
 
 # import chatting module
-from modules.chat.chat import APIClient
+from modules.chat.chat import Client
 from modules.chat.get_sys import get_system_message
 
 # import modules for conversion
@@ -42,7 +42,7 @@ TOP_P: int = 1
 MAX_TOKENS: int = 600
 
 # create a new client for chat completion
-client = APIClient()
+client = Client()
 
 # empty messages list at the start
 messages = []
@@ -85,19 +85,8 @@ async def generate():
     # count input tokens
     input_tokens: int = await count_tokens(encoder, await msg_transform.msg_str(messages))
 
-    # streaming handler
-    async def stream():
-    
-        # the final response from the ai
-        response: str = "data: "
-
     # let the AI generate a response
-    #response: str = await client.generate_text(messages, await models_transform.encrypt_model(MODEL), f"{await get_system_message(messages)}", temperature=TEMPERATURE, top_p=TOP_P, max_tokens=MAX_TOKENS, stream=False)
-
-        for chunk in client.generate_text(messages, await models_transform.encrypt_model(MODEL), f"{await get_system_message(messages)}", temperature=TEMPERATURE, top_p=TOP_P, max_tokens=MAX_TOKENS, stream=False):
-
-            response += chunk
-            yield jsonify({response: token})
+    response: str = await client.generate(messages, await models_transform.encrypt_model(MODEL), f"{await get_system_message(messages)}", temperature=TEMPERATURE, top_p=TOP_P, max_tokens=MAX_TOKENS)
 
     # try removing NUL (empty) characters from the response (a common bug that causes errors)
     try:
