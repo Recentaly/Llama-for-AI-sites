@@ -4,6 +4,9 @@ import json
 import queue
 import threading
 
+# this function allows us to translate a message list to a string body
+from modules.transform.messages import msg_str
+
 # Setting up basic logging configuration
 logging.basicConfig()
 logger = logging.getLogger()
@@ -71,7 +74,7 @@ class APIClient:
 
             yield chunk
 
-    def generate_text(self, prompt, model, system_prompt: str = "You're an AI assistant", temperature: int = 0.7, top_p: int = 1, max_tokens: int = 600, stream: bool = True, image=None, audio=None):
+    async def generate_text(self, prompt, model, system_prompt: str = "You're an AI assistant", temperature: int = 0.7, top_p: int = 1, max_tokens: int = 600, stream: bool = True, image=None, audio=None):
         # Log the prompt being sent
         logger.info(f"Sending prompt: {prompt}")
 
@@ -80,7 +83,7 @@ class APIClient:
 
         # Payload for the request
         payload = {
-            "prompt": prompt,
+            "prompt": await msg_str(prompt), # convert prompt to messages list
             "version": model,
             "systemPrompt": system_prompt,
             "temperature": temperature,
@@ -97,7 +100,7 @@ class APIClient:
             # Make a streaming request and process response chunks
             for chunk in self.make_streamed_request(self.GENERATE_URL, headers=headers, data=json.dumps(payload)):
 
-                output_text += chunk.decode()
+                output_text += await chunk.decode()
                 yield chunk.decode()
         else:
             # Make a standard POST request
