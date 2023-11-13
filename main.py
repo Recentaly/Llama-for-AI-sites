@@ -86,7 +86,7 @@ async def generate():
     input_tokens: int = await count_tokens(encoder, await msg_transform.msg_str(messages))
 
     # let the AI generate a response
-    response: str = await client.generate_text(prompt=messages, await models_transform.encrypt_model(MODEL), f"{await get_system_message(messages)}", temperature=TEMPERATURE, top_p=TOP_P, max_tokens=MAX_TOKENS, False)
+    response: str = await client.generate_text(messages, await models_transform.encrypt_model(MODEL), f"{await get_system_message(messages)}", temperature=TEMPERATURE, top_p=TOP_P, max_tokens=MAX_TOKENS, False)
 
     # try removing NUL (empty) characters from the response (a common bug that causes errors)
     try:
