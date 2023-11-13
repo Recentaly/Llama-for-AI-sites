@@ -42,7 +42,7 @@ TOP_P: int = 1
 MAX_TOKENS: int = 600
 
 # create a new client for chat completion
-client = Client()
+client = APIClient()
 
 # empty messages list at the start
 messages = []
