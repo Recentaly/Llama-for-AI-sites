@@ -2,6 +2,7 @@
 import json
 import logging
 import requests
+import brotli
 
 # this function allows us to translate a message list to a string body
 from modules.transform.messages import msg_str
@@ -49,7 +50,7 @@ class Client:
             "audio": audio
         }
 
-        response = self.session.post(self.generate_url, headers=self.headers, data=json.dumps(payload))
+        response = self.session.post(self.generate_url, headers=self.headers, json=payload)
 
         # check if generation worked (success = code 200)
         if response.status_code == 200:
@@ -57,8 +58,11 @@ class Client:
             # append the received response to the list of messages
             messages.append({"role": "assistant", "content": f"{response.text}"})
 
-            # return the generated text
-            return response.text.encode('utf-8', 'replace').decode('utf-8')
+            try:
+
+                return brotli.decompress(response.content).decode('utf-8')
+
+            except: return response.content.decode('utf-8')
         
         else:
             logger.error(f"Failed with status code {response.status_code}")
